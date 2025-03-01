@@ -1,13 +1,11 @@
-# Sample Hardhat Project
+=======Deploying contract======
+Deployer Address:  0x0eE1F2b663547dAa487F57C517C7563AdCf86da0
+======Contract Deployed======
+Contract Address:  0x3647bEd3a1f36E15306542C1565B0088C3b2725A
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a Hardhat Ignition module that deploys that contract.
+NFT Name: OnChainNFT
+NFT Symbol: OCN
 
-Try running some of the following tasks:
 
-```shell
-npx hardhat help
-npx hardhat test
-REPORT_GAS=true npx hardhat test
-npx hardhat node
-npx hardhat ignition deploy ./ignition/modules/Lock.ts
-```
+
+https://sepolia.basescan.org/address/0x3647bEd3a1f36E15306542C1565B0088C3b2725A#code

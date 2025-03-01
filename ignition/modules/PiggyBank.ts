@@ -3,11 +3,10 @@
 
 import { buildModule } from "@nomicfoundation/hardhat-ignition/modules";
 
-const AccessNFTModule = buildModule("AccessNFTModule", (m) => {
+const PiggyBankModule = buildModule("PiggyBankModule", (m) => {
+  const piggyBank = m.contract("PiggyBankFactory");
 
-  const AccessNFT = m.contract("AccessNFT");
-
-  return { AccessNFT };
+  return { piggyBank };
 });
 
-export default AccessNFTModule;
+export default PiggyBankModule;

@@ -21,18 +21,13 @@ contract PiggyBankFactory {
             abi.encode(_savingsPurpose, _durationInDays, developerAddr)
         );
 
-        // Deploy PiggyBank using CREATE2
         assembly {
             piggyAddress := create2(0, add(bytecode, 32), mload(bytecode), salt)
             if iszero(piggyAddress) { revert(0, 0) }
-        }
+        } // Deploys the PiggyBank using CREATE2
 
         userPiggies[msg.sender].push(piggyAddress);
 
         emit PiggyCreated(piggyAddress, msg.sender, _savingsPurpose, _durationInDays);
-    }
-
-    function getUserPiggies(address _user) external view returns (address[] memory) {
-        return userPiggies[_user];
     }
 }
